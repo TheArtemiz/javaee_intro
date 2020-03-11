@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+
+
+</head>
+
+   <f:view>
+      <h:outputLabel value="Add a new employee:"/>
+      <FORM action="http://localhost:8080/JAVAEE_TEST_war_exploded/api/company/employee/form" name= "save_emp" method="post" enctype="application/json">
+      <p>
+
+      Firstname: <INPUT type="text" name="firstname" tabindex="1"/>
+      Lastname: <INPUT type="text" name="lastname" tabindex="2"/>
+      Age: <INPUT type="text" name="age" tabindex="3"/>
+      Salary: <INPUT type="text" name="salary" tabindex="4"/>
+      <INPUT type="submit" name="save" value="Save"  />
+     </p>
+    </FORM>
+
+   </f:view>
+</html>

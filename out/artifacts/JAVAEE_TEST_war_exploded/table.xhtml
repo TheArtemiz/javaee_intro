@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form id="form1">
+        <p:dataTable value="#{employeeBean.listEmployees}" var="e" paginator="true" rows="5">
+            <f:facet name="header">
+                Employee List
+            </f:facet>
+            <p:column  filterBy="#{e.first_name}">
+                <f:facet name="header">
+                    <h:outputText value="First Name" />
+                </f:facet>
+                <h:outputText value="#{e.first_name}"/>
+            </p:column>
+            <p:column sortBy="#{e.last_name}">
+                <f:facet name="header">
+                    <h:outputText value="Last Name" />
+                </f:facet>
+                <h:outputText value="#{e.last_name}"/>
+            </p:column>
+
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>
